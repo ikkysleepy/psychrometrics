@@ -1,0 +1,103 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pychrometrics</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <script type="text/javascript" src="../utilities/globals.js"></script>
+    <script type="text/javascript" src="../utilities/office-apis-helpers.js"></script>
+    <script type="text/javascript" src="../commands/commands.js"></script>
+    <script type="text/javascript" src="../functions/functions.js"></script>
+    <script type="text/javascript" src="taskpane.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <div>
+        <p> Psychrometrics allows the calculation of psychrometric properties of moist and dry air.</p>
+   </div>
+    <div>
+        <p> Here are the available functions:</p>
+        <ol>
+            <li>
+                <p>
+                  <b>dewpoint</b> - Calculates dew point based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1), relative humidity (situation = 3), or humidity ratio (Situation=4).                  
+                </p>
+            </li>
+            <li>
+                <p>
+                  <b>enthalpy</b> - Calculates enthalpy based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1),  dew-point (situation = 2), relative humidity (situation = 3), or humidity ratio (Situation=4).
+                </p>
+            </li>
+            <li>
+                <p>
+                  <b>humidity</b> - Calculates relative humidity (%) based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1), dew-point (situation = 2), or humidity ratio (Situation=4).     
+                </p>
+            </li>
+
+            <li>
+                <p>
+                  <b>humidratio</b> - Calculates humidity ratio based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1),  dew-point (situation = 2), or  relative humidity (situation = 3).  
+                </p>
+            </li>
+
+            <li>
+                <p>
+                  <b>volume</b> - Calculates volume based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1),  dew-point (situation = 2), relative humidity (situation = 3), or humidity ratio (Situation=4).   
+                </p>
+            </li>
+            <li>
+                <p>
+                  <b>wetbulb</b> - Calculates wet bulb based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be dew-point (situation = 2), relative humidity (situation = 3), or humidity ratio (Situation=4).  
+                </p>
+            </li>
+            <li>
+                <p>
+                  <b>altitudeAtmoP</b> - Calculates estimate of atmospheric pressure from altitude (ft or km).                  
+                </p>
+            </li>
+            </ol>
+        </ol>
+        <h4> Example: Finding Relative Humidity</h4>
+        <p> Given: </p>
+        <div class="shift-left">
+                <p> <b>&#9702;</b> Dry-bulb temperature 20 °C  </p>
+                <p> <b>&#9702;</b> Wet-bulb temperature 12 °C </p>
+                <p> <b>&#9702;</b> Pressure 101.325 kPa</p>
+                <p> <b>&#9702;</b> Situation 1: (wet bulb is knonwn)</p>
+                <p> <b>&#9702;</b> Unit: SI</p>
+        
+        </div>
+        <p> Find Relative Humidity using Psychrometrics functions:</p>
+        <div class="shift-left">
+                <p> <b>&#9702;</b> humidity( dew-point, pressure, situation, wet-bulb, si_units)</p>
+                <p> &nbsp;&nbsp;&nbsp;<b>Formula</b> =psychrometrics.humidity( 20, 101.325,1, 12, TRUE)</p>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <p>This addin uses psychrolib.</h4>
+            <p> Summary Paper: <a href="https://doi.org/10.21105/joss.01137"  target="_blank">https://doi.org/10.21105/joss.01137</a></p>
+            <p> Version: <a href="https://doi.org/10.5281/zenodo.2537945"  target="_blank">https://doi.org/10.5281/zenodo.2537945</a></p>    
+        </div>
+        <br>
+
+    </div>
+    
+    </main>
+</body>
+
+</html>

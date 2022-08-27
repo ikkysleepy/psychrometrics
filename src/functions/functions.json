@@ -1,0 +1,241 @@
+{
+    "functions": [
+        {
+            "description": "Calculates relative humidity (%) based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1), dew-point (situation = 2), or humidity ratio (Situation=4).",
+            "id": "humidity",
+            "name": "humidity",
+            "parameters": [
+                {
+                    "description": "Temperature",
+                    "name": "temp",
+                    "type": "number"
+                },
+                {
+                    "description": "Pressure",
+                    "name": "pressure",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "situation",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "state_var",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Calculates dew point based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1), relative humidity (situation = 3), or humidity ratio (Situation=4).",
+            "id": "dewpoint",
+            "name": "dewpoint",
+            "parameters": [
+                {
+                    "description": "Temperature",
+                    "name": "temp",
+                    "type": "number"
+                },
+                {
+                    "description": "Pressure",
+                    "name": "pressure",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "situation",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "state_var",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Calculates wet bulb temperature based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be dew-point (situation = 2), relative humidity (situation = 3), or humidity ratio (Situation=4).",
+            "id": "wetbulb",
+            "name": "wetbulb",
+            "parameters": [
+                {
+                    "description": "Temperature",
+                    "name": "temp",
+                    "type": "number"
+                },
+                {
+                    "description": "Pressure",
+                    "name": "pressure",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "situation",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "state_var",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Calculates humidity ratio based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1),  dew-point (situation = 2), or  relative humidity (situation = 3).",
+            "id": "humidratio",
+            "name": "humidratio",
+            "parameters": [
+                {
+                    "description": "Temperature",
+                    "name": "temp",
+                    "type": "number"
+                },
+                {
+                    "description": "Pressure",
+                    "name": "pressure",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "situation",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "state_var",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Calculates enthalpy based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1),  dew-point (situation = 2), relative humidity (situation = 3), or humidity ratio (Situation=4).",
+            "id": "enthalpy",
+            "name": "enthalpy",
+            "parameters": [
+                {
+                    "description": "Temperature",
+                    "name": "temp",
+                    "type": "number"
+                },
+                {
+                    "description": "Pressure",
+                    "name": "pressure",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "situation",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "state_var",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Calculates specific volume based on T (°F or °C), P (psia or kPa) and state vairable. The state variable can be wet-bulb (Situation 1),  dew-point (situation = 2), relative humidity (situation = 3), or humidity ratio (Situation=4).",
+            "id": "volume",
+            "name": "volume",
+            "parameters": [
+                {
+                    "description": "Temperature",
+                    "name": "temp",
+                    "type": "number"
+                },
+                {
+                    "description": "Pressure",
+                    "name": "pressure",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "situation",
+                    "type": "number"
+                },
+                {
+                    "description": "Situation (1-4)",
+                    "name": "state_var",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Calculates estimate of atmospheric pressure from altitude (ft or km).",
+            "id": "altitudeAtmoP",
+            "name": "altitudeAtmoP",
+            "parameters": [
+                {
+                    "description": "Altitude",
+                    "name": "altitude",
+                    "type": "number"
+                },
+                {
+                    "description": "Is SI Units?",
+                    "name": "si_units",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        }
+    ]
+}
